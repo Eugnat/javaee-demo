@@ -30,6 +30,9 @@ public class Hello implements Serializable {
     }
 
     public String getName() {
+
+        helloEJBBean.readMessage();
+
         return name;
     }
 
@@ -38,4 +41,5 @@ public class Hello implements Serializable {
         String uppercaseName = helloEJBBean.setUpperCase(name);
         this.name = uppercaseName;
     }
+
 }
